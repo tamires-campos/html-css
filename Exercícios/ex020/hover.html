@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        h1{
+            font-size: 3em;
+        }
+
+        p{
+            font-size: 2em;
+        }
+
+        div > p {
+            display: none;
+        }
+
+        div:hover > p{
+            display: block;
+            color: white;
+            background-color: red;
+            font-size: 5em;
+            text-align: center;
+        }
+
+        div:hover{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Olha o que eu aprendi!</h1>
+    <p>Passe o mouse sobre o texto abaixo:</p>
+    <div style="font-size: 2em;">
+        <strong>passe o mouse aqui</strong>
+        <p>Te amo 😘❤️</p>
+    </div>
+</body>
+</html>
