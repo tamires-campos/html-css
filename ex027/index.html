@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+        }
+
+        .teste1{
+            border: 10px solid red;
+        }
+        
+        .p1{
+            box-sizing: content-box;
+            width:100%;
+            background-color: yellow;
+            border: 10px solid green;
+            padding: 10px;
+        }
+
+        .teste2{
+            border: 10px solid blue;
+        }
+
+        .p2{
+            box-sizing: border-box;
+            width: 100%;
+            background-color: yellow;
+            border: 10px solid green;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Difereça entre box-sizing: content-box & border-box</h1>
+    <div class="teste1">
+        
+        <p class="p1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste excepturi quaerat velit, quae dolores placeat similique explicabo accusantium expedita omnis corporis est repudiandae quia optio pariatur, obcaecati ullam magnam porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita velit maiores reiciendis ea beatae, fugit possimus rem rerum. Corporis tempore laborum necessitatibus alias sit cupiditate aut cumque dolorum. Ullam, omnis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, perferendis illo eius placeat cum velit rerum sed sunt laborum necessitatibus porro, suscipit officiis recusandae nam repellendus adipisci modi, fugiat blanditiis.</p>
+    </div>
+
+    <br>
+
+    <div class="teste2">
+        
+        <p class="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste excepturi quaerat velit, quae dolores placeat similique explicabo accusantium expedita omnis corporis est repudiandae quia optio pariatur, obcaecati ullam magnam porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita velit maiores reiciendis ea beatae, fugit possimus rem rerum. Corporis tempore laborum necessitatibus alias sit cupiditate aut cumque dolorum. Ullam, omnis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, perferendis illo eius placeat cum velit rerum sed sunt laborum necessitatibus porro, suscipit officiis recusandae nam repellendus adipisci modi, fugiat blanditiis.</p>
+    </div>
+</body>
+</html>
+
+<!--
+    box-sizing: content-box 
+Se você definir a largura de um elemento como 100% ou 100px, a caixa de conteúdo do elemento terá 100% pixels de largura, mas a largura de qualquer borda que for adicionada ou preenchimento será adicionada à largura final renderizada, tornando o elemento mais largo que 100px.
+-->
