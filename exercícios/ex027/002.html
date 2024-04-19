@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .col{
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        margin: 20px;
+        float: left;
+    }
+
+    p{
+        clear: left; /*posso usar left, right e both (os 2 lados)*/
+    }
+
+    /*TAMBÉM PODERIA FAZER O SEGUINTE
+
+    .grid::after {
+        content:'';
+        display: block;
+        clear:both;
+
+    FAZENDO ISSO EU NAO PRECISO UTILIZAR O CLEAR NO PARAGRAFO
+    */
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi praesentium ullam qui fugit beatae asperiores quae dolorum cum placeat neque vitae itaque, repudiandae eaque alias recusandae eum fuga reiciendis facere!</p>
+</body>
+</html>
