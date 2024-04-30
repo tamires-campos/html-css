@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/*quando utilizamos "display: flex;" as tags "flex-direction: row; e  justify-content: flex-start;" já vem por padrão*/
+
+.flex-container{
+    height: 100vh;
+    background: rgb(206, 206, 83);
+    display: flex;
+    flex-direction: column-reverse;
+    /*Direção do meu Eixo Principal
+    Para "flex-direction:" DIREÇÃO
+    podemos utilizar as seguintes configurações:
+        - row (linha que começa da esquerda para direita) [ 1 2 3      ]
+        - row-reverse (linha q começa da direita para esquerda) [   3 2 1]
+        - column (coluna de cima para baixo)
+        - column-reverse (coluna de baixo para cima)
+    */
+
+
+
+
+    justify-content: space-evenly; 
+    /*Eixo Principal = 
+    Para "justify-content:" podemos utilizar as seguintes configurações:
+        - start(começo)
+
+        - center(meio) 
+
+        - end(fim)
+
+        - space-between (distribui o espaço igualmente entre os filhos do container. pega o primeiro item e encosta no "start" e o ultimo item encosta no "end", o restante distribui para que o espaçamento entre os filhos seja igual.)
+        [1   2   3]
+    
+        - space-around (o espaço da direita e esquerda de cada ITEM são igualmente espaçados, porem o primeiro e o ultimo sempre ficam com metade do espaçamento, pois nao somam com outro item 
+        [/1\/2\/3\] -> 1 e 3 ficaram com espaçamento menor em relação a 2
+
+        - space-evenly espaçamento igual em cada um dos ITEMS 
+        [  1   2   3  ]
+    */
+}
+
+.flex-item{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(178, 37, 143);
+    margin: 10px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/*     SEGUNDA SESSÃO     */
+
+.flex-container-two{
+    background: rgb(169, 61, 61);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    /*Eixo Transversal ou CROSS AXIS (align-items:) é sempre ao contrário do 
+    Eixo Principal ou MAIN AXIS (flex-direction:)
+    
+    por padrão o "align-items:" vem com a configuração de "STRETCH", que sig para colocar o ITEM com o maior tamanho possível, isso se o ITEM não tiver uma altura já designada como, por exemplo:
+    ".flex-item-two:nth-child(1){
+        height: 150px;"
+
+    OUTRAS CONFIG. DO ALIGN-ITEMS:
+    - flex-start (neste caso vai alinhar em cima)
+    - flex-end (neste caso vai alinhar em baixo)
+    - center (no meio)
+    - baseline vai se alinhar na base da linha do primeiro ITEM. Experimente aumentar o tamanho da fonte com "font-size" na class ".flex-item-two:nth-child(1)"
+    */
+    gap: 30px;
+    /*a tag GAP é utilizada para dar espaçamento iguais entre seus ITEMS
+    COMPARE a tag "gap: 30px" no ".flex-container-two{" com "margin: 30px" no ".flex-item-two{" 
+    - margim dá um espaçamento em volta de todo ITEM (em cima, direita, baixo e esquerda)
+    - gap dá um espaçamento somente entre os ITEMS 
+    */
+    height: 100vh;
+}
+
+.flex-item-two{
+    background-color: rgb(63, 186, 47);
+    text-align: center;
+}
+
+.flex-item-two:nth-child(1){
+    height: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+/*     TERCEIRA SESSÃO     */
+
+.flex-container-three{
+    height: 100vh;
+    background: rgb(206, 206, 83);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+/*
+flex-wrap: vem como padrão 
+- NOWRAP que sig para não quebrar a linha idependente da quantidade de ITEMS podendo fazer OVERFLOW (sair fora da tela)
+
+- WRAP vai quebrando linha e nao deixa os ITEMS fazerem overflow
+
+- WRAP-REVERSE vai quebrando linha invertendo o align-items
+*/
+}
+
+.flex-item-three{
+    background-color: rgb(178, 37, 143);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*     QUARTA SESSÃO     */
+
+.flex-container-four{
+    height: 100vh;
+    background: rgb(169, 61, 61);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+
+    /*flex-direction: row*/
+    /*flex-wrap: wrap*/
+
+    flex-flow: row wrap;
+    /*flex-flow: é um shortHand para flex-direction: e flex-wrap: */
+}
+
+.flex-item-four{
+    background-color: rgb(63, 186, 47);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*     QUINTA SESSÃO     */
+
+.flex-container-five{
+    height: 100vh;
+    background: rgb(206, 206, 83);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.flex-item-five{
+    background-color: rgb(178, 37, 143);
+    text-align: center;
+}
