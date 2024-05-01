@@ -13,7 +13,7 @@
     height: 100vh;
     background: rgb(206, 206, 83);
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     /*Direção do meu Eixo Principal
     Para "flex-direction:" DIREÇÃO
     podemos utilizar as seguintes configurações:
@@ -22,9 +22,6 @@
         - column (coluna de cima para baixo)
         - column-reverse (coluna de baixo para cima)
     */
-
-
-
 
     justify-content: space-evenly; 
     /*Eixo Principal = 
@@ -47,10 +44,10 @@
 }
 
 .flex-item{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-color: rgb(178, 37, 143);
-    margin: 10px;
+    margin: 5px;
     
 }
 
@@ -85,6 +82,7 @@
     - center (no meio)
     - baseline vai se alinhar na base da linha do primeiro ITEM. Experimente aumentar o tamanho da fonte com "font-size" na class ".flex-item-two:nth-child(1)"
     */
+
     gap: 30px;
     /*a tag GAP é utilizada para dar espaçamento iguais entre seus ITEMS
     COMPARE a tag "gap: 30px" no ".flex-container-two{" com "margin: 30px" no ".flex-item-two{" 
@@ -189,10 +187,89 @@ flex-wrap: vem como padrão
     justify-content: flex-start;
     align-items: flex-start;
     gap: 30px;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    align-content: space-around;
+    /*
+    align-content: faz com que os ITEMS que quebraram de linha fiquem o mais próximo o possível
+    
+    - flex-start - ALINHA PARA CIMA
+    - flex-end - ALINHA PARA BAIXO
+    - center - centraliza
+    - space-between
+    - space-around
+    - space-evenly
+    */
 }
 
 .flex-item-five{
     background-color: rgb(178, 37, 143);
     text-align: center;
+}
+
+/*EXPERIMENTE REMOVER O COMENTARIO DA TAG ABAIXO PARA VER O QUE ACONTECE COM O align-content: flex-start*/
+/*.flex-item-five:nth-child(1){
+    height: 150px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*     SEXTA SESSÃO     */
+.flex-container-six{
+    height: 100vh;
+    background: rgb(169, 61, 61);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;  /* Muito comum utilizar gap e padding no elemento pai para dar o espaçamento certinho entro ITEMS*/
+    flex-wrap: wrap;
+}
+
+.flex-item-six{
+    background-color: rgb(63, 186, 47);
+    text-align: center;
+    
+    flex-grow: 1;  /* faz os ITEMS crescenrem usando o espaço disponível 
+    o padrão é o zerom onde não faz grow*/
+}
+
+
+
+/*pegando ITEM específico e colocando na ordem que quiser*/
+.flex-item-six:nth-child(1){  
+    order: 3;
+}
+
+.flex-item-six:nth-child(2){ 
+    order: 2;
+}
+
+.flex-item-six:nth-child(3){ 
+    order: 1;
+    /*align-self: flex-end; faz com esse item específico se alinhe abaixo*/
+}
+
+
+
+
+/* faz ITEM específico crescer */
+.flex-item-six:last-child{ 
+    flex-grow: 4;
+    /* flex-shrink: 1;  SHRINK é o inverso do grow, ele diminui */
+    /* flex-basis:200px; faz com que  o ITEM tenha o tamanho inicipal de 200px como se fosse uma tag de width. podendo tambem utilizar como 100%*/ 
+
+    /* shortHand para flex-grow, shrink e basis
+        que seria: flex: 4 1 200px; (grow, shrink e basis)
+        ou poderia colocar flex: 1; (tudo com valor 1)
+     */ 
 }
