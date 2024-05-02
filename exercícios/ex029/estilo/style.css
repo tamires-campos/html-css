@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    border: 5px cyan solid;
+    height: 97vh;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* INFORMA QUANTIDADE DE COLUNAS
+    podemos utilizar pixel: 100px 100px 100px;
+    mas com 1fr deixa mais responsivo.
+    tbm podemos utilizar 1fr 2fr 1fr, 1.5fr  
+    (e qlqr variação disso)
+
+    TAMBÉM PODEMOS USAR MINMAX
+    grid-template-columns: minmax(0, 1fr) minmax(400px, 1fr)
+
+    TAMBÉM PODEMOS USAR REPEAT
+    grid-template-columns: repeat(6, 1fr) sig que eu quero repetir 6 vxs 1fr
+
+    MINMAX e REPEAT
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    também posso utilizar auto-fit e auto-fill no lugar do numero 3
+    - auto-fit ele cresce a div para não sobre espaço e quebra assim que atingir o tamanho min que neste caso seria de 100px
+    - auto-fill ele cria células invisíveis toda vez que dá o espaço suficiente sem esticar o conteúdo 
+    */
+
+    grid-template-rows: 100px 100px 100px 100px;
+    /*INFORMA SOBRE AS LINHAS
+    - auto 200px; (1ª linha auto e 2ª altura de 200px)
+    */
+
+    /*grid-auto-rows: 100px;
+    INFORMA SOBRE AS LINHAS QUE NÃO RECEBERAM INSTRUÇÃO, NESTE CASO DA 3ª EM DIANTE. 
+    - 100px; (Da 3ª linha em diante, terá 100px de altura)*/
+
+    gap: 30px;  
+    /*5px 10px
+    padding: 30px;
+    column-gap: ;
+    row-gap: ;*/
+}
+
+.item{
+    background:deeppink;
+    /*margin: 10px;*/
+}
+
+
+
+
+
+
+
+/* SEGUNDA SESSÃO */
+
+.containertwo{
+    border: 5px rgb(0, 255, 89) solid;
+    height: 97vh;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.itemtwo{
+    background:deeppink;
+}
+
+.item-2{
+    background-color: red;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    /*ou poderia usar da seguinte forma
+    grid-row: 1 / 3;
+    grid-column: 2 / 4;
+    */
+}
+
+.item-7{
+    background-color: purple;
+    grid-row: 4 / span 2;
+    grid-column: 1 / span 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TERCEIRA SESSÃO */
+.containerthree{
+    height: 100vh;
+    width: 98vw;
+    display: grid;
+    
+    grid-template-areas: 
+    "i1 i1"
+    "i2 i3"
+    "i4 i4";
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 50px 1fr 60px;
+}
+
+.itemthree{
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+}
+
+.item1{
+    grid-area: i1;
+    background: red;
+}
+
+.item2{
+    grid-area: i2;
+    background: green;
+}
+
+.item3{
+    grid-area: i3;
+    background: blue;
+}
+
+.item4{
+    grid-area: i4;
+    background: purple;
+}

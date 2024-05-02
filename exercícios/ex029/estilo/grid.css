@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+/* QUARTA SESSÃO */
+
+.containerfour{
+    background-color: yellow;
+    height: 100vh;
+    width: 100vw;
+    gap: 10px;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(4, 100px);
+
+/* alinha a div*/
+    justify-content: center;
+    align-content: center;
+
+/* alinha o item dentro da div*/
+    align-items: start; 
+    justify-items: start;
+}
+
+.itemfour{
+    background:deeppink;
+    text-align: center;
+}
+
+
+.item--8{
+    align-self: center;
+    justify-self: center;
+    background-color: blueviolet;
+}
