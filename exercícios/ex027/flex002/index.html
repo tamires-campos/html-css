@@ -9,26 +9,18 @@
             background-color: lightsalmon;
 
             display: flex;
-            /*flex-direction: row; da esquerda para direita*/
-            /*flex-direction: row-reverse; da direita para esquerda*/
-            /*flex-direction: column;  de cima para baixo*/
-            /*flex-direction: column-reverse;  de baixo para cima*/
-
-            
+            /*flex-wrap: nowrap; não quebra*/
+            /*flex-wrap: wrap; quebra no sentido do cross-axis*/
+            /*flex-wrap: wrap-reverse; quebra no sentido oposto do cross-axis */
         }
 
         div.item{
             background-color: lightskyblue;
             border: 1px solid black;
             text-align: center;
-
-            flex: auto;
+            padding: 10px;
         }
 
-        img{
-            max-width: 100%;
-            max-height: 100%;
-        }
     </style>
 </head>
 <body>
@@ -41,8 +33,6 @@
         <div class="item">F</div>
         <div class="item">G</div>
     </div>
-    <div class="foto">
-        <img src="imagens/direcoes-e-eixos-flexbox.jpeg" alt="">
-    </div>
+    
 </body>
 </html>

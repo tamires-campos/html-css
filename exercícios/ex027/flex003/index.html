@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexble Box</title>
+    <style>
+        div.conteiner{
+            background-color: lightsalmon;
+            /*PARA TESTAR COM "COLUMN" utilize height: 500px e depois diminua para 100px ou menos*/
+            /*height: 500px;*/
+            
+            display: flex;
+            flex-direction: column; /*TESTAR row e row-reverse*/
+            flex-wrap: wrap;  /*TESTAR nowrap , wrap e wrap-reverse*/
+            /*shorthand!! -> flex-flow: row nowrap =  flex-direction: row; + flex-wrap: wrap;*/
+        }
+
+        div.item{
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            flex: auto;  /*TESTAR COM E SEM */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item">Exemplo de bloco A</div>
+        <div class="item">Exemplo de bloco B</div>
+        <div class="item">Exemplo de bloco C</div>
+        <div class="item">Exemplo de bloco D</div>
+        <div class="item">Exemplo de bloco E</div>
+        <div class="item">Exemplo de bloco F</div>
+        <div class="item">Exemplo de bloco G</div>
+    </div>
+</body>
+</html>
