@@ -7,8 +7,13 @@
     <style>
         div.conteiner{
             background-color: lightsalmon;
-
+            height: 300px; /*tem como padrão align-items: stretch*/
             display: flex;
+            flex-flow: row nowrap;  /*valor padrão seria flex-flow: row nowrap   poderia utilizar -> row / rowreverse*/
+            justify-content: space-around; /*valor padrão    poderia utilizar -> star/end/center  e tbm spacce-between/around/evely*/
+            align-items: center;  /*valor padrão seria align-items: stretch (esticar) mas tbm posso usar star/center/end*/
+
+
             /*flex-direction: row; da esquerda para direita*/
             /*flex-direction: row-reverse; da direita para esquerda*/
             /*flex-direction: column;  de cima para baixo*/
@@ -21,13 +26,6 @@
             background-color: lightskyblue;
             border: 1px solid black;
             text-align: center;
-
-            flex: auto;
-        }
-
-        img{
-            max-width: 100%;
-            max-height: 100%;
         }
     </style>
 </head>
@@ -41,14 +39,6 @@
         <div class="item">F</div>
         <div class="item">G</div>
     </div>
-    <div class="foto">
-        <img src="imagens/direcoes-e-eixos-flexbox.jpeg" alt="">
-    </div>
-    <div class="foto">
-        <img src="imagens/flexbox.jpeg" alt="">
-    </div>
-    <div class="foto">
-        <img src="imagens/justify-content.jpeg" alt="">
-    </div>
+    
 </body>
 </html>
