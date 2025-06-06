@@ -9,8 +9,8 @@
             background-color: lightsalmon;
             height: 300px; /*tem como padrão align-items: stretch*/
             display: flex;
-            flex-flow: row nowrap;  /*valor padrão seria flex-flow: row nowrap   poderia utilizar -> row / rowreverse*/
-            justify-content: space-around; /*valor padrão    poderia utilizar -> star/end/center  e tbm spacce-between/around/evely*/
+            flex-flow: row wrap;  /*valor padrão seria flex-flow: row nowrap   poderia utilizar -> row / rowreverse*/
+            justify-content: space-around; /*valor padrão (ele faz o ALINHAMENTO de acordo com o main-axis que é o EIXO PRINCIPAL juntamente com o MAIN-START e MAIN-END)   poderia utilizar ->flex-star/end/center  e tbm spacce-between/around/evely*/
             align-items: center;  /*valor padrão seria align-items: stretch (esticar) mas tbm posso usar star/center/end*/
 
 
@@ -31,13 +31,13 @@
 </head>
 <body>
     <div class="conteiner">
-        <div class="item">A</div>
-        <div class="item">B</div>
-        <div class="item">C</div>
-        <div class="item">D</div>
-        <div class="item">E</div>
-        <div class="item">F</div>
-        <div class="item">G</div>
+        <div class="item">Bloco A</div>
+        <div class="item">Bloco B</div>
+        <div class="item">Bloco C</div>
+        <div class="item">Bloco D</div>
+        <div class="item">Bloco E</div>
+        <div class="item">Bloco F</div>
+        <div class="item">Bloco G</div>
     </div>
     
 </body>
