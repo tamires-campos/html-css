@@ -18,27 +18,36 @@
             background-color: lightskyblue;
             border: 1px solid black;
             text-align: center;
-            flex-basis: 200px; /*padro: AUTO podemos usar tbm tamanh em px com uma medida certa como 150px até onde couber, pois ele vai quebrando conforme for diminuindo o tamanho do container PAI*/ 
+             /*padro: AUTO podemos usar tbm tamanh em px com uma medida certa como 150px até onde couber, pois ele vai quebrando conforme for diminuindo o tamanho do container PAI*/ 
             height: 50px;
         }
 
         div#cxA{
-            flex-shrink: 1;
+            /*flex-shrink: 1;
             flex-grow: 1;
+            flex-basis: 200px;*/
+            flex: 1 1 200px;
         }
 
         div#cxB{
-            flex-shrink: 1;
-            flex-grow: 1;
+            /*flex-shrink: 1;
+            flex-grow: 0;
+            flex-basis: 100px;*/
+            flex: 0 1 100px;
         }
 
         div#cxC{
-            flex-shrink: 1;            
+            /*flex-shrink: 0;            
             flex-grow: 1;
+            flex-basis: auto;*/
+            flex: 1 0 auto;
         }
 
-        /*O exerc é ir alterando os valores e analisar como se comportam*/
-        
+        /*FLEX = flex-grow  +  flex-shrink  +  flex-basis    ->   */
+        /*PADÃO = flex: 0 1 auto  =  flex: initial 
+                  flex: 0 0 auto  =  flex: none   (nada flexível) 
+                  flex: 1 1 auto  =  flex: auto
+                  flex: 3         =  flex: 3 1 auto           */
     </style>
 </head>
 <body>
