@@ -19,13 +19,12 @@
             border: 1px solid black;
             text-align: center;
             flex-basis: 50px; /*padro: AUTO podemos usar tbm tamanh em px com uma medida certa como 150px até onde couber, pois ele vai quebrando conforme for diminuindo o tamanho do container PAI*/
-            
+            flex-shrink: 1; /*pode encolher?  por padrão SIM */
+            flex-grow: 1; /*pode aumentar? por padrão NÃO*/
+            /* 1 - sig que pode SIM        0 - sig que NÂO pode*/
         }
 
-        img{
-            max-width: 100%;
-            max-height: 100%;
-        }
+        
     </style>
 </head>
 <body>
@@ -33,23 +32,7 @@
         <div class="item">A</div>
         <div class="item">B</div>
         <div class="item">C</div>
-        <div class="item">D</div>
-        <div class="item">E</div>
-        <div class="item">F</div>
-        <div class="item">G</div>
-
-
-    <!--
     </div>
-    <div class="foto">
-        <img src="imagens/direcoes-e-eixos-flexbox.jpeg" alt="">
-    </div>
-    <div class="foto">
-        <img src="imagens/flexbox.jpeg" alt="">
-    </div>
-    <div class="foto">
-        <img src="imagens/justify-content.jpeg" alt="">
-    </div> 
-    -->
+    
 </body>
 </html>

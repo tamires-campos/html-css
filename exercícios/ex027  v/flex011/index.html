@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexble Box</title>
+    <style>
+        div.conteiner{
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row nowrap; /* IMPORTANTE UTILIZAR "ROW NOWRAP" PARA UTILIZAR FLEX BASIS mas tbm dá para utilizar com WRAP*/
+
+            
+        }
+
+        div.item{
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px; /*padro: AUTO podemos usar tbm tamanh em px com uma medida certa como 150px até onde couber, pois ele vai quebrando conforme for diminuindo o tamanho do container PAI*/ 
+        }
+
+        div#cxA{
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+
+        div#cxB{
+            flex-shrink: 0;
+            flex-grow: 1;
+        }
+
+        div#cxC{
+            flex-shrink: 0;            
+            flex-grow: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+    
+</body>
+</html>
