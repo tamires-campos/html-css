@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 header > nav {
-    border: 3px dotted black; /*PONTILHADO*/
+    /*border: 3px dotted black; PONTILHADO*/
 
     display: flex;
     flex-flow: row nowrap;

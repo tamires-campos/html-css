@@ -61,6 +61,8 @@ header > nav > a:hover{
     transform: scale(1.05); /*  transforma em uma escala de 5% maior*/
 }
 
+
+
 main{
     background-color: #1a1a2e;
     margin: auto;
