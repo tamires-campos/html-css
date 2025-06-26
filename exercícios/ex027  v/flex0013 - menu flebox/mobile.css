@@ -5,9 +5,50 @@ header, header > nav{ /*Coloquei a mesma descrição para "header" e "nav" atrav
 }
 
 header > h1 {
-    flex-basis: 50px;
+    /*border: 3px dotted;*/
+    flex: auto;
+    font-size: 2em;
+    margin: 5px 0px 15px 0px;
 }
 
 header > nav > a {
-    width: 90vw;
+    width: 80vw;
+}
+
+main{
+    width: 80vw;
+    margin: auto;
+    text-align: justify;
+}
+
+main > h2{
+    font-size: 1.2em;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/*BURGUER*/
+
+span#burguer{
+    display: block;
+}
+
+span#burguer:hover{
+    transform: scale(1.04);
+    cursor: pointer;
+}
+
+nav{
+    display: none;
+}
+
+nav > a{
+    list-style-type: none;
+}
+
+nav > a{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
 }
