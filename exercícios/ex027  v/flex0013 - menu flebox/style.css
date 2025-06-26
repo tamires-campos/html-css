@@ -46,7 +46,7 @@ header > nav > a{
     background-color: #1a1a2e;
     color: #a259ff;
     border: 1px solid #a259ff;
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin: 5px;
     border-radius: 8px;
     text-decoration: none; /*tira o sublinhado dos links*/
@@ -67,12 +67,13 @@ main{
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-    max-width: 800px;
+    max-width: 600px;
+    
 }
 
 h2{
     color: #00f2fe;
-    
+    margin: 15px 5px;
 }
 
 p {

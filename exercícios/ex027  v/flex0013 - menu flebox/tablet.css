@@ -1,12 +1,18 @@
 @charset "UTF-8";
 
 header > nav {
-    /*border: 3px dotted black;*/
+    border: 3px dotted black; /*PONTILHADO*/
 
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
-    flex:auto
+    flex:none
+
+        /*FLEX = flex-grow  +  flex-shrink  +  flex-basis  
+          PADÃO = flex: 0 1 auto  =  flex: initial 
+                  flex: 0 0 auto  =  flex: none   (nada flexível) 
+                  flex: 1 1 auto  =  flex: auto
+                  flex: 3         =  flex: 3 1 auto      */
 }
 
 header > h1 {
@@ -14,8 +20,11 @@ header > h1 {
 }
 
 main{
-    max-width: 660px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
     margin: auto;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 main > h2{
